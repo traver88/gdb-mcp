@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gdb-mcp"
+version = "0.1.0"
+description = "High-permission MCP server for controlling GDB through GDB/MI."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "gdb-mcp contributors" }]
+dependencies = [
+  "mcp>=1.2.0",
+  "pygdbmi>=0.11.0.0",
+  "pydantic>=2.0.0",
+  "pyelftools>=0.31",
+]
+
+[project.optional-dependencies]
+pwn = ["pwntools>=4.12.0"]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+gdb-mcp = "server:main"
+
+[tool.setuptools]
+py-modules = ["server", "gdb_controller", "config", "models", "safety", "utils"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

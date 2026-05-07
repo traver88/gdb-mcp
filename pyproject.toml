@@ -25,7 +25,7 @@ dev = ["pytest>=8.0.0"]
 gdb-mcp = "server:main"
 
 [tool.setuptools]
-py-modules = ["server", "gdb_controller", "config", "models", "safety", "utils"]
+py-modules = ["server", "server_runtime", "tools_session", "tools_memory", "tools_meta", "tools_remote", "tools_control", "tools_advanced", "gdb_controller", "config", "models", "safety", "utils"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

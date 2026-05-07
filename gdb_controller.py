@@ -459,6 +459,8 @@ class GdbController:
             "raw": target_result.raw,
         }
         self.remote_connected = target_result.ok
+        if not target_result.ok:
+            self.current_inferior_state = None
         return {
             "ok": target_result.ok,
             "target_command": target_command,
@@ -478,6 +480,7 @@ class GdbController:
         result = self.execute_cli("disconnect", timeout=timeout, parse=False)
         if result.ok:
             self.remote_connected = False
+            self.current_inferior_state = None
         self.last_remote_output = self._command_result_brief(result)
         return {
             "ok": result.ok,

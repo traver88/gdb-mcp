@@ -295,10 +295,14 @@ def parse_hex_bytes(data_hex: str) -> bytes:
     """Parse a hex string such as ``414243`` or ``0x41 0x42 0x43``."""
 
     cleaned = data_hex.strip()
+    if not cleaned:
+        return b""
     if "\\x" in cleaned:
         cleaned = cleaned.replace("\\x", " ")
     cleaned = cleaned.replace(",", " ").replace("0x", " ")
     parts = [part for part in _SPACE_RE.split(cleaned) if part]
+    if not parts:
+        return b""
     if len(parts) == 1 and len(parts[0]) > 2:
         text = parts[0]
         if len(text) % 2 != 0:

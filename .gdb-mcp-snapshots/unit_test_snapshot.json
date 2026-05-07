@@ -1,0 +1,53 @@
+{
+  "status": {
+    "running": false,
+    "pid": null,
+    "gdb_path": "gdb",
+    "workdir": "E:\\yuyan\\project\\gdb-mcp",
+    "binary": "E:/bin/pwn",
+    "core": "E:/bin/core",
+    "symbol_file": "E:/bin/pwn.sym",
+    "inferior_state": "stopped:breakpoint-hit",
+    "last_command": "bt",
+    "gdb_version": null,
+    "remote_status": {
+      "enabled": true,
+      "connected": false,
+      "host": null,
+      "port": null,
+      "mode": "remote",
+      "local_binary": null,
+      "remote_binary": null,
+      "sysroot": null,
+      "solib_search_path": null,
+      "debug_file_directory": null,
+      "architecture": null,
+      "inferior_state": "stopped:breakpoint-hit",
+      "last_remote_output": {
+        "ok": true
+      }
+    }
+  },
+  "remote": {
+    "enabled": true,
+    "connected": false,
+    "host": null,
+    "port": null,
+    "mode": "remote",
+    "local_binary": null,
+    "remote_binary": null,
+    "sysroot": null,
+    "solib_search_path": null,
+    "debug_file_directory": null,
+    "architecture": null,
+    "inferior_state": "stopped:breakpoint-hit",
+    "last_remote_output": {
+      "ok": true
+    }
+  },
+  "binary": "E:/bin/pwn",
+  "core": "E:/bin/core",
+  "symbol_file": "E:/bin/pwn.sym",
+  "last_command": "bt",
+  "inferior_state": "stopped:breakpoint-hit"
+}
